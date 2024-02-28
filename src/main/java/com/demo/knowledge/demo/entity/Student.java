@@ -28,6 +28,7 @@ public class Student extends RepresentationModel<Student> {
     @OneToOne(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private User user;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_school", referencedColumnName = "id_school")
     private School school;
