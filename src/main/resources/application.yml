@@ -1,0 +1,26 @@
+#Queue
+queue:
+  name: rabbit-queue
+
+#Application host
+server:
+  port: 8081
+
+# RabbiQM host
+spring:
+#  profiles: prod
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: demo
+    password: 123
+    virtual-host: job
+    virtual-host-job: job
+
+#    template:
+#      # setting exchange, routing-key for send
+#      exchange: dome.student
+#      routing-key: student-key
+
+      # setting receive timeout
+#      receive-timeout: 30000

@@ -7,12 +7,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.hateoas.RepresentationModel;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "student")
-public class Student extends RepresentationModel<Student> {
+public class Student extends RepresentationModel<Student> implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_student")

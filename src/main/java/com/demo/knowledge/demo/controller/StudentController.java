@@ -2,6 +2,7 @@ package com.demo.knowledge.demo.controller;
 
 import com.demo.knowledge.demo.entity.Student;
 import com.demo.knowledge.demo.repository.StudentRepository;
+import com.demo.knowledge.demo.service.interf.ISendMailService;
 import com.demo.knowledge.demo.service.interf.IStudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.Link;
@@ -32,4 +33,5 @@ public class StudentController {
     public ResponseEntity<?> getStudent(@PathVariable(name = "id") int id){
         return ResponseEntity.ok(iStudentService.getStudentById(id));
     }
+
 }
